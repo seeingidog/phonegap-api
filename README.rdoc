@@ -6,20 +6,15 @@ https://build.phonegap.com/docs/api
 
 == Examples
 
-  conn = Phonegap::Connection.new(@username, @password)
+Create connection
+
+  conn = Phonegap::Connection.new("username", "password")
+
+List apps
+
   conn.apps
   => #<Phonegap::Apps:0x000001009d30e0 @apps=[#<Phonegap::App:0x000001009d3068 @repo="http://github.com/phonegap/phonegap-start.git", @download={"webos"=>"/api/v1/apps/94659/webos", "blackberry"=>"/api/v1/apps/94659/blackberry", "android"=>"/api/v1/apps/94659/android", "symbian"=>"/api/v1/apps/94659/symbian"}, title"PhoneGap: Getting Started", phonegap_version"1.5.0", privatefalse, role"admin", icon{"filename"=>"icon.png", "link"=>"/api/v1/apps/94659/icon"}, id94659, version"1.0.0", package"com.phonegap.getting.started", link"/api/v1/apps/94659", description"A template for getting started with PhoneGap development and build.phonegap.com", debugfalse, status{"webos"=>"complete", "ios"=>nil, "blackberry"=>"complete", "android"=>"complete", "symbian"=>"complete"}, error{}, build_count4], link"/api/v1/apps" 
  
-
-== Contributing to phonegap-api
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 == Copyright
 
