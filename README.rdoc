@@ -5,6 +5,12 @@ Ruby wrapper for the Phonegap build API.
 https://build.phonegap.com
 https://build.phonegap.com/docs/api
 
+
+== Installation
+
+  gem install phonegap-api
+
+
 == Examples
 
 Create connection
