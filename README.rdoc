@@ -1,6 +1,8 @@
 = phonegap-api
 
-Description goes here.
+Ruby wrapper for the Phonegap build API.
+
+https://build.phonegap.com/docs/api
 
 == Contributing to phonegap-api
  
