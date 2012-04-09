@@ -34,7 +34,7 @@ module Phonegap
     end
     
     def check_response!(output)
-      raise APIError, output['error'] if output['error']
+      raise APIError, output['error'] if output['error'].class == String
       output
     end
   end
