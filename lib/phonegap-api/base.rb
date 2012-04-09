@@ -1,5 +1,6 @@
 module Phonegap
   class UnsupportedPlatformError < StandardError ; end
+  class APIError < StandardError ; end
   
   class Connection
     include HTTParty
@@ -13,20 +14,28 @@ module Phonegap
     end
     
     def get(url)
-      self.class.get(url, @auth).parsed_response
+      output = self.class.get(url, @auth).parsed_response
+      check_response!(output)
     end
     
     def post(url, body)
-      self.class.post(url, @auth.merge!({:data => body})).parsed_response
+      output = self.class.post(url, @auth.merge!({:data => body})).parsed_response
+      check_response!(output)
     end
     
     def put(url, body)
-      self.class.put(url, @auth.merge!({:data => body})).parsed_response
+      output = self.class.put(url, @auth.merge!({:data => body})).parsed_response
+      check_response!(output)
     end
     
     def delete(url, body)
-      self.class.delete(url, @auth).parsed_response
+      output = self.class.delete(url, @auth).parsed_response
+      check_response!(output)
     end
     
+    def check_response!(output)
+      raise APIError, output['error'] if output['error']
+      output
+    end
   end
 end
