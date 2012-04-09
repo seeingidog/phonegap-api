@@ -13,6 +13,6 @@ module Phonegap
       hash = {"data" => hash}
       hash.to_json
     end
-
+    
   end
 end

@@ -8,6 +8,6 @@ module Phonegap
       end
       @link = api_data['link']
     end
-    
+
   end
 end

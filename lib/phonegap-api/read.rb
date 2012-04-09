@@ -5,11 +5,11 @@ module Phonegap
     end
 
     def apps
-      self.get("/apps")
+      Apps.new(self.get("/apps"))
     end
 
     def get_app(app_id)
-      self.get("/apps/#{app_id}")
+      App.new(self.get("/apps/#{app_id}"))
     end
 
     def get_icon(app_id)
