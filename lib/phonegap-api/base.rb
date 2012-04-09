@@ -1,4 +1,6 @@
 module Phonegap
+  class UnsupportedPlatformError
+  end
   class Connection
     include HTTParty
     base_uri 'https://build.phonegap.com/api/v1'

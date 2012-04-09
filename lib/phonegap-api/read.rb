@@ -17,12 +17,22 @@ module Phonegap
     end
 
     def get_package_url(app_id, platform)
-      raise "Unsupported platform" unless SUPPORTED_PLATFORMS.include?(platform)
+      raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
       self.get("/apps/#{app_id}/#{platform}")['location']
     end
 
     def keys
       self.get("/keys")
+    end
+    
+    def keys_for_platform(platform)
+      raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
+      self.get("/keys/#{platform}")
+    end
+    
+    def get_key(platform, key_id)
+      raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
+      self.get("/keys/#{platform}/#{key_id}")
     end
   end
 end
