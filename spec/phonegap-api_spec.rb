@@ -45,4 +45,12 @@ describe "PhonegapApi" do
     @conn.apps.class.should == Phonegap::Apps
   end
   
+  it "creates an app" do
+    @app_id = @conn.create_app(:title => 'API test app', :repo => 'https://github.com/alunny/phonegap-start.git', :create_method => 'remote_repo')['id']
+  end
+    
+  it "deletes the created app" do
+    @conn.delete_app(@app_id)
+  end
+  
 end

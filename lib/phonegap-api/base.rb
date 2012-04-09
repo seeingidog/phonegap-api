@@ -19,16 +19,16 @@ module Phonegap
     end
     
     def post(url, body)
-      output = self.class.post(url, @auth.merge!({:data => body})).parsed_response
+      output = self.class.post(url, @auth.merge!({:body =>{:data => body}})).parsed_response
       check_response!(output)
     end
     
     def put(url, body)
-      output = self.class.put(url, @auth.merge!({:data => body})).parsed_response
+      output = self.class.put(url, @auth.merge!({:body =>{:data => body}})).parsed_response
       check_response!(output)
     end
     
-    def delete(url, body)
+    def delete(url)
       output = self.class.delete(url, @auth).parsed_response
       check_response!(output)
     end
