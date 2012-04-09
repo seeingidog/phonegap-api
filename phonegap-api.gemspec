@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "lib/phonegap-api/base.rb",
     "lib/phonegap-api/read.rb",
     "lib/phonegap-api/write.rb",
+    "phonegap-api.gemspec",
     "spec/phonegap-api_spec.rb",
     "spec/spec_helper.rb"
   ]
