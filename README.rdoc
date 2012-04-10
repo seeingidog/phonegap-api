@@ -27,11 +27,13 @@ List applications
 Build/Create sample application
 
   conn.create_app(:title => 'API test app', :repo => 'https://github.com/alunny/phonegap-start.git', :create_method => 'remote_repo')
-
+  => {"keys"=>{"ios"=>nil, "blackberry"=>nil, "android"=>nil}, "repo"=>"https://github.com/alunny/phonegap-start.git", "download"=>{}, "collaborators"=>{"pending"=>[], "link"=>"/api/v1/apps/98651/collaborators", "active"=>[{"person"=>"ian@ruby-code.com", "role"=>"admin", "id"=>88276, "link"=>"/api/v1/apps/98651/collaborators/88276"}]}, "title"=>"alunnys Amazing App", "private"=>true, "phonegap_version"=>"1.5.0", "role"=>"admin", "icon"=>{"filename"=>"blurry.png", "link"=>"/api/v1/apps/98651/icon"}, "id"=>98651, "package"=>"com.alunny.amazing", "version"=>"1.0.0", "debug"=>false, "link"=>"/api/v1/apps/98651", "description"=>"An Amazing app by alunny", "status"=>{"webos"=>"pending", "ios"=>nil, "blackberry"=>"pending", "android"=>"pending", "symbian"=>"pending"}, "error"=>{}, "build_count"=>nil} 
+ 
 
 Delete application
   conn.delete_app(94659)
-  
+  => {"success"=>"app 94659 deleted"} 
+ 
 
 == Contribute
 
