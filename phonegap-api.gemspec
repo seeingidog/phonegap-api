@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "phonegap-api"
-  s.version = "1.0.0"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ian Morgan"]
-  s.date = "2012-04-09"
+  s.date = "2012-04-10"
   s.description = "Ruby wrapper to the Phonegap build API"
   s.email = "ian@ruby-code.com"
   s.extra_rdoc_files = [
