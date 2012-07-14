@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ian Morgan"]
-  s.date = "2012-04-10"
+  s.date = "2012-07-14"
   s.description = "Ruby wrapper to the Phonegap build API"
   s.email = "ian@ruby-code.com"
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "config/phonegap.yml.example",
     "lib/phonegap-api.rb",
     "lib/phonegap-api/app.rb",
     "lib/phonegap-api/apps.rb",
@@ -38,7 +39,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/seeingidog/phonegap-api"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.24"
   s.summary = "Ruby wrapper to the Phonegap build API"
 
   if s.respond_to? :specification_version then
