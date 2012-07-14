@@ -8,11 +8,16 @@ module Phonegap
     follow_redirects false
     format :json
 
-    def initialize(username, password)
-      @auth = {:basic_auth => {:username => username, :password => password}}
+    def initialize(*auth)
+      if auth != []
+        @auth = {:basic_auth => auth}
+      else
+        @auth = {:basic_auth => YAML.load_file("config/phonegap.yml")}
+      end
     end
     
     def get(url)
+      puts @auth.inspect
       output = self.class.get(url, @auth)
       check_response!(output).parsed_response
     end

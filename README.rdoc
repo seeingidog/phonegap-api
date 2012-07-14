@@ -15,8 +15,11 @@ https://build.phonegap.com/docs/api
 
 Create connection
 
-  conn = Phonegap::Connection.new("username", "password")
+  conn = Phonegap::Connection.new(:username => "username", :password =>"password")
 
+Or with config/phonegap.yml populated with phonegap build credentials
+
+  conn = Phonegap::Connection.new
 
 List applications
 

@@ -1,11 +1,16 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 
-describe "PhonegapApi" do
+describe "Phonegap config reading" do
+  it "reads the config and creates api object" do
+    Phonegap::Connection.new.class.should == Phonegap::Connection
+  end
+end
+
+describe "Phonegap API operations" do
   before(:each) do
-    @username = ""
-    @password = ""
-    @conn = Phonegap::Connection.new(@username, @password)
+    #assumes config/phonegap.yml exists with credentials
+    @conn = Phonegap::Connection.new
     @specific_app_id = 94659
   end
   
@@ -13,7 +18,7 @@ describe "PhonegapApi" do
   describe "Read operations" do
     
     it "recieves information about current user" do  
-      @conn.me.keys.should == ["apps", "keys", "username", "id", "link", "email"]
+      @conn.me.keys.sort.should == ["apps", "keys", "username", "id", "link", "email"].sort
     end
 
     it "retrieves list of keys for account" do
