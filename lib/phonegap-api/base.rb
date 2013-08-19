@@ -8,7 +8,7 @@ module Phonegap
     follow_redirects false
     format :json
 
-    def initialize(*auth)
+    def initialize(auth)
       if auth != []
         @auth = {:basic_auth => auth}
       else
