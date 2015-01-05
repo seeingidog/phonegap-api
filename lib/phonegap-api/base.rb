@@ -13,7 +13,7 @@ module Phonegap
         @auth = {:basic_auth => auth}
       else
         # @auth = {:basic_auth => YAML.load_file("config/phonegap.yml")}
-        @auth = {:basic_auth => YAML.load_file(Rails.root.join('config/phonegap.yml'))[Rails.env]}
+        @auth = {:basic_auth => YAML.load_file(Rails.root.join('config/phonegap.yml'))}
       end
     end
     
