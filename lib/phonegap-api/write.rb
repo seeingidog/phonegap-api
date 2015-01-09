@@ -9,9 +9,9 @@ module Phonegap
       self.delete("/apps/#{app_id}")
     end
     
-    def unlock_key(platform, key_id, password)
+    def unlock_key(platform, key_id, params)
       raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
-      self.put("/keys/#{platform}/#{key_id}", password)
+      self.put("/keys/#{platform}/#{key_id}", params)
     end
   
   end
