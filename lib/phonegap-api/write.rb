@@ -16,7 +16,7 @@ module Phonegap
     
     def build_app(app_id, params)
       #raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
-      self.post("/apps/#{app_id}/build/", params)
+      self.put("/apps/#{app_id}/build/", params)
     end
   
   end
