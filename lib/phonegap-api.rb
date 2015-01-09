@@ -5,5 +5,5 @@ dir = File.expand_path(File.join(File.dirname(__FILE__),  'phonegap-api'))
 end
 
 module Phonegap
-  SUPPORTED_PLATFORMS = ["android", "blackberry", "ios", "symbian","webos"]
+  SUPPORTED_PLATFORMS = ["android", "blackberry", "ios", "symbian","webos", "winphone"]
 end
