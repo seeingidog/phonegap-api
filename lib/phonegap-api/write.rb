@@ -11,7 +11,7 @@ module Phonegap
     
     def unlock_key(platform, key_id, password)
       raise UnsupportedPlatformError unless SUPPORTED_PLATFORMS.include?(platform)
-      self.post("/keys/#{platform}/#{key_id}", password)
+      self.put("/keys/#{platform}/#{key_id}", password)
     end
   
   end
