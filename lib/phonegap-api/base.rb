@@ -17,7 +17,6 @@ module Phonegap
     end
     
     def get(url)
-      puts @auth.inspect
       output = self.class.get(url, @auth)
       check_response!(output).parsed_response
     end
