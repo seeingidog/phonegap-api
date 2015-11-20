@@ -9,8 +9,8 @@ module Phonegap
     format :json
 
     def initialize(*auth)
-      if auth != []
-        @auth = {:basic_auth => auth}
+      if auth.any?
+        @auth = {:basic_auth => auth.first}
       else
         @auth = {:basic_auth => YAML.load_file("config/phonegap.yml")}
       end
